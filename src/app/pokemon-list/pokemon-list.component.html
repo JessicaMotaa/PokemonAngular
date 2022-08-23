@@ -1,0 +1,22 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+crossorigin="anonymous">
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.pinimg.com/originals/8a/4a/72/8a4a7213b43f4ec4f99db406be655f9e.gif"
+      alt="logo-pokemon" width="60" class="d-inline-block align-text-top" />
+    </a>
+  </div>
+</nav>
+
+  <div class="pokemon-list">
+    <app-pokemon-card 
+      *ngFor="let pokemon of pokemonService.pokemons; index as i"
+      [pokemon]="pokemon['name']"
+      [numero]="i+1">
+    </app-pokemon-card>
+  </div>
+  
+<!--<div *ngFor="let pokemon of 
+pokemons">Pokemon: {{ pokemon }}</div>-->
